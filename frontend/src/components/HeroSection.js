@@ -7,159 +7,165 @@ import { ProgressiveBlur } from './ProgressiveBlur'
 import HeroSpline from './HeroSpline'
 import { AnimatedGradientText } from './AnimatedGradientText'
 
-//function AnimatedGradientTextDemo() {
-//    return (
-//        <AnimatedGradientText
-//            speed={3}
-//            colorFrom="#4ade80"
-//            colorTo="#06b6d4"
-//            className="text-4xl font-semibold tracking-tight"
-//        >
-//            Pitch like a pro
-//        </AnimatedGradientText>
-//    );
-//}
-
 export function HeroSection() {
     return (
         <>
             <main className="overflow-x-hidden">
-                <section className='bg-white dark:bg-black text-black dark:text-white p-5 text-center'>
-                    <div className='border border-white rounded-[10px] text-center text-lg logo px-3 text-gray-300 mx-auto w-fit'>
+                <section className='bg-white dark:bg-black text-black dark:text-white px-4 sm:px-6 lg:px-8 text-center'>
+                    {/* Logo */}
+                    <div className='border border-gray-300 dark:border-gray-600 rounded-lg text-center text-sm sm:text-base lg:text-lg px-3 py-1 text-gray-500 dark:text-gray-300 mx-auto w-fit mt-4'>
                         PitchBotX
                     </div>
-                    <div className="pb-15 pt-6 md:pb-28 lg:pb-35 lg:pt-18">
-                        <div className="relative mx-auto flex max-w-6xl flex-col-reverse gap-x-12 items-center px-7 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
+                    
+                    {/* Hero Content */}
+                    <div className="pb-12 pt-8 sm:pb-16 sm:pt-12 md:pb-20 lg:pb-28 lg:pt-16">
+                        <div className="relative mx-auto flex max-w-7xl flex-col gap-8 items-center px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+                            
                             {/* Text Content */}
-                            <div className="mt-12 w-full max-w-xl py-10 text-center lg:mt-0 lg:w-1/2 lg:text-left">
-                                <h1 className="mt-8 text-balance text-5xl font-medium md:text-6xl xl:text-7xl">
-                                    <AnimatedGradientText speed={1.5}
+                            <div className="w-full max-w-2xl text-center lg:w-1/2 lg:text-left lg:max-w-xl">
+                                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-medium leading-tight">
+                                    <AnimatedGradientText 
+                                        speed={1.5}
                                         colorFrom="#999090"
                                         colorTo="#ef4444"
-                                        className="text-7xl headline">
+                                        className="block"
+                                    >
                                         Pitch Like a Pro.
                                     </AnimatedGradientText>
                                 </h1>
-                                <p className="mt-3 text-pretty text-lg text-gray-400">
+                                <p className="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-400 max-w-lg mx-auto lg:mx-0">
                                     Turn ideas into investor-ready pitches with AI.
                                 </p>
-                                <div className="mt-12 flex flex-col items-center justify-center gap-1 sm:flex-row lg:justify-start">
-                                    <Link to="/pitchform">
-                                        <Button asChild size="lg" className="px-5 text-base bg" >
-                                            <span className="text-nowrap">Try Now!</span>
+                                
+                                {/* CTA Buttons */}
+                                <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 lg:justify-start">
+                                    <Link to="/pitchform" className="w-full sm:w-auto">
+                                        <Button 
+                                            size="lg" 
+                                            className="w-full sm:w-auto px-6 sm:px-8 py-3 text-base font-medium"
+                                        >
+                                            Try Now!
                                         </Button>
                                     </Link>
                                     <Button
-                                        asChild
                                         size="lg"
                                         variant="ghost"
-                                        className="px-5 text-base"
+                                        className="w-full sm:w-auto px-6 sm:px-8 py-3 text-base font-medium border border-gray-300 dark:border-gray-600"
                                     >
+                                        Learn More
                                     </Button>
                                 </div>
                             </div>
 
-                            {/* HeroSpline beside the text */}
-                            <div className="w-full lg:w-1/2 flex justify-center">
-                                <HeroSpline />
+                            {/* HeroSpline */}
+                            <div className="w-full lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+                                <div className="w-full max-w-md sm:max-w-lg lg:max-w-none">
+                                    <HeroSpline />
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </section>
-                <section className="bg-background pb-10 md:pb-30 bg-white dark:bg-black text-black dark:text-white">
-                    <div className="group relative m-auto max-w-6xl px-6">
+
+                {/* Logos Section */}
+                <section className="bg-white dark:bg-black text-black dark:text-white pb-12 sm:pb-16 md:pb-20 lg:pb-24">
+                    <div className="group relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="flex flex-col items-center md:flex-row">
-                            <div className="md:max-w-44 md:border-r md:pr-6">
-                                <p className="text-end text-sm">Made By </p>
+                            
+                            {/* "Made By" Label */}
+                            <div className="mb-4 md:mb-0 md:max-w-32 lg:max-w-44 md:border-r md:border-gray-200 dark:md:border-gray-700 md:pr-4 lg:pr-6">
+                                <p className="text-center md:text-right text-sm text-gray-500 dark:text-gray-400">
+                                    Made By
+                                </p>
                             </div>
-                            <div className="relative py-4 md:w-[calc(100%-11rem)] ">
-                                <InfiniteSlider speedOnHover={20} speed={40} gap={112}>
-                                    <div className="flex ">
+                            
+                            {/* Logo Slider */}
+                            <div className="relative py-4 w-full md:w-[calc(100%-8rem)] lg:md:w-[calc(100%-11rem)]">
+                                <InfiniteSlider speedOnHover={20} speed={40} gap={80} className="sm:gap-100 lg:gap-112">
+                                    <div className="flex items-center justify-center">
                                         <img
-                                            className="mx-auto h-5 w-fit dark:invert"
+                                            className="h-4 sm:h-5 w-auto dark:invert"
                                             src="https://html.tailus.io/blocks/customers/nvidia.svg"
                                             alt="Nvidia Logo"
-                                            height="20"
-                                            width="auto"
+                                            loading="lazy"
                                         />
                                     </div>
 
-                                    <div className="flex">
+                                    <div className="flex items-center justify-center">
                                         <img
-                                            className="mx-auto h-4 w-fit dark:invert"
+                                            className="h-3 sm:h-4 w-auto dark:invert"
                                             src="https://html.tailus.io/blocks/customers/column.svg"
                                             alt="Column Logo"
-                                            height="16"
-                                            width="auto"
+                                            loading="lazy"
                                         />
                                     </div>
-                                    <div className="flex">
+                                    
+                                    <div className="flex items-center justify-center">
                                         <img
-                                            className="mx-auto h-4 w-fit dark:invert"
+                                            className="h-3 sm:h-4 w-auto dark:invert"
                                             src="https://html.tailus.io/blocks/customers/github.svg"
                                             alt="GitHub Logo"
-                                            height="16"
-                                            width="auto"
+                                            loading="lazy"
                                         />
                                     </div>
-                                    <div className="flex">
+                                    
+                                    <div className="flex items-center justify-center">
                                         <img
-                                            className="mx-auto h-5 w-fit dark:invert"
+                                            className="h-4 sm:h-5 w-auto dark:invert"
                                             src="https://html.tailus.io/blocks/customers/nike.svg"
                                             alt="Nike Logo"
-                                            height="20"
-                                            width="auto"
+                                            loading="lazy"
                                         />
                                     </div>
-                                    <div className="flex">
+                                    
+                                    <div className="flex items-center justify-center">
                                         <img
-                                            className="mx-auto h-5 w-fit dark:invert"
+                                            className="h-4 sm:h-5 w-auto dark:invert"
                                             src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
                                             alt="Lemon Squeezy Logo"
-                                            height="20"
-                                            width="auto"
+                                            loading="lazy"
                                         />
                                     </div>
-                                    <div className="flex">
+                                    
+                                    <div className="flex items-center justify-center">
                                         <img
-                                            className="mx-auto h-4 w-fit dark:invert"
+                                            className="h-3 sm:h-4 w-auto dark:invert"
                                             src="https://html.tailus.io/blocks/customers/laravel.svg"
                                             alt="Laravel Logo"
-                                            height="16"
-                                            width="auto"
+                                            loading="lazy"
                                         />
                                     </div>
-                                    <div className="flex">
+                                    
+                                    <div className="flex items-center justify-center">
                                         <img
-                                            className="mx-auto h-7 w-fit dark:invert"
+                                            className="h-5 sm:h-6 lg:h-7 w-auto dark:invert"
                                             src="https://html.tailus.io/blocks/customers/lilly.svg"
                                             alt="Lilly Logo"
-                                            height="28"
-                                            width="auto"
+                                            loading="lazy"
                                         />
                                     </div>
 
-                                    <div className="flex">
+                                    <div className="flex items-center justify-center">
                                         <img
-                                            className="mx-auto h-6 w-fit dark:invert"
+                                            className="h-5 sm:h-6 w-auto dark:invert"
                                             src="https://html.tailus.io/blocks/customers/openai.svg"
                                             alt="OpenAI Logo"
-                                            height="24"
-                                            width="auto"
+                                            loading="lazy"
                                         />
                                     </div>
                                 </InfiniteSlider>
 
-                                <div className="bg-linear-to-r from-background absolute inset-y-0 left-0 w-20"></div>
-                                <div className="bg-linear-to-l from-background absolute inset-y-0 right-0 w-20"></div>
+                                {/* Gradient Overlays */}
+                                <div className="absolute inset-y-0 left-0 w-12 sm:w-16 lg:w-20 bg-gradient-to-r from-white dark:from-black to-transparent pointer-events-none"></div>
+                                <div className="absolute inset-y-0 right-0 w-12 sm:w-16 lg:w-20 bg-gradient-to-l from-white dark:from-black to-transparent pointer-events-none"></div>
+                                
                                 <ProgressiveBlur
-                                    className="pointer-events-none absolute left-0 top-0 h-full w-20"
+                                    className="pointer-events-none absolute left-0 top-0 h-full w-12 sm:w-16 lg:w-20"
                                     direction="left"
                                     blurIntensity={1}
                                 />
                                 <ProgressiveBlur
-                                    className="pointer-events-none absolute right-0 top-0 h-full w-20"
+                                    className="pointer-events-none absolute right-0 top-0 h-full w-12 sm:w-16 lg:w-20"
                                     direction="right"
                                     blurIntensity={1}
                                 />
@@ -171,35 +177,3 @@ export function HeroSection() {
         </>
     )
 }
-
-// const HeroHeader = () => {
-//     const [menuState, setMenuState] = React.useState(false)
-//     return (
-//         <header>
-//             <nav
-//                 data-state={menuState && 'active'}
-//                 className="group bg-background/50 fixed z-20 w-full border-b backdrop-blur-3xl"
-//             >
-//                 <div className="mx-auto max-w-6xl px-6 transition-all duration-300">
-//                     <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
-//                         <div className="flex w-full items-center justify-between gap-12 lg:w-auto">
-//                             <Link href="/" aria-label="home" className="flex items-center space-x-2">
-//                                 <Logo />
-//                             </Link>
-
-//                             <button
-//                                 onClick={() => setMenuState(!menuState)}
-//                                 aria-label={menuState === true ? 'Close Menu' : 'Open Menu'}
-//                                 className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
-//                             >
-//                                 <Menu className="group-data-[state=active]:rotate-180 group-data-[state=active]:scale-0 group-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
-//                                 <X className="group-data-[state=active]:rotate-0 group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
-//                             </button>
-//                         </div> 
-//                     </div>
-//                 </div>
-//             </nav>
-//         </header>
-//     )
-// }
-
