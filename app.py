@@ -5,7 +5,7 @@ from export_utils import create_ppt, create_pdf
 from flask_cors import CORS
 from custom_nlp import audience_alignment, buzzword_density, rewrite_in_persona
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='frontend/build', static_url_path='')
 CORS(app)
 
 @app.route("/generate-pitch", methods=["POST"])
