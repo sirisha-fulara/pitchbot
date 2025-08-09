@@ -33,7 +33,7 @@ const PitchForm = () => {
         };
 
         try {
-            const res = await axios.post("https://pitchbotx.onrender.com/pitchform/generate-pitch", payload);
+            const res = await axios.post("https://pitchbotx.onrender.com/generate-pitch", payload);
             setResult(res.data);
         } catch (err) {
             console.error(err);
