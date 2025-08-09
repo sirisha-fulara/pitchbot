@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { Button } from './Button'
 import { InfiniteSlider } from './InfiniteSlider'
 import { ProgressiveBlur } from './ProgressiveBlur'
-import { cn } from '../lib/utils'
 import HeroSpline from './HeroSpline'
 import { AnimatedGradientText } from './AnimatedGradientText'
 
