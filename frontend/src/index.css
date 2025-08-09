@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Method 2: Direct CSS (if Tailwind config doesn't work) */
+@keyframes gradient {
+  to {
+    background-position: var(--bg-size, 300%) 0;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 8s linear infinite;
+}
+
+/* Method 3: Using CSS custom properties */
+:root {
+  --animate-gradient: gradient 8s linear infinite;
+}
+
+/* Alternative approach with duration control */
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.headline{
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  }
+  .logo{
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .competitors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+.competitor-card {
+  background: #252525;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #00ff75;
+  color: #e6e6e6;
+}
+.competitor-card h3 {
+  color: #00ff75;
+  margin-bottom: 0.5rem;
+}
+h3{
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+
+}
