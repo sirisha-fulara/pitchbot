@@ -1,5 +1,4 @@
 'use client'
-import { useNavigate } from 'react-router-dom'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from './Button'
@@ -9,18 +8,18 @@ import { cn } from '../lib/utils'
 import HeroSpline from './HeroSpline'
 import { AnimatedGradientText } from './AnimatedGradientText'
 
-function AnimatedGradientTextDemo() {
-    return (
-        <AnimatedGradientText
-            speed={3}
-            colorFrom="#4ade80"
-            colorTo="#06b6d4"
-            className="text-4xl font-semibold tracking-tight"
-        >
-            Pitch like a pro
-        </AnimatedGradientText>
-    );
-}
+//function AnimatedGradientTextDemo() {
+//    return (
+//        <AnimatedGradientText
+//            speed={3}
+//            colorFrom="#4ade80"
+//            colorTo="#06b6d4"
+//            className="text-4xl font-semibold tracking-tight"
+//        >
+//            Pitch like a pro
+//        </AnimatedGradientText>
+//    );
+//}
 
 export function HeroSection() {
     return (
